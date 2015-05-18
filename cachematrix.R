@@ -22,11 +22,13 @@
 ##         get: return the matrix
 ##         setinv: sets the inverse in cache
 ##         getinv: returns the inverse
+##      returns a list object that encapsulatese the methods for access using the
+##      object$method syntax. See examples below. 
 ##
 ##      This is a constructor for a matrix object that holds its inverse
 ##      as an attribute, i.e. cached, once it is computed. Access to this
-##      attribute, i.e. matrix inverse, is through the functions "setinv" and "getinv".
-##      Methods get and set allow access and reset to the values of the matrix.
+##      attribute, i.e. matrix inverse, is through the methods "setinv" and "getinv".
+##      Methods "get" and "set" allow access and reset to the values of the matrix.
 ##
 ##      Matrices built with this constructor are expected to call the cacheSolve
 ##      function in this package to compute the inverse, and benefit from the cache
@@ -110,7 +112,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ##[3,] -0.07838637  1.16130885  0.3139817
 ##
 ## THE CALL TO cacheSolve(mcache) NOT ONLY COMPUTES THE INVERSE, AND RETURNS IT, BUT
-## ALSO SETS IT IN CACHE FOR FUTURE ACCESS THROUGH THE "getinv" ATTRIBUTE.
+## ALSO SETS IT IN CACHE FOR FUTURE ACCESS THROUGH THE "getinv" METHOD.
 ##
 ##> mcache$getinv()
 ##            [,1]        [,2]       [,3]
