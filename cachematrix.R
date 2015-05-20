@@ -38,7 +38,7 @@
 ##      Usage examples:
 ##> source("cachematrix.R")
 ##> set.seed(1)
-##> mcache <- makeCacheMatrix(matrix(rnorm(9),nrow=3,ncol=3)
+##> mcache <- makeCacheMatrix(matrix(rnorm(9),nrow=3,ncol=3))
 ##> mcache$get() 
 ##           [,1]       [,2]      [,3]
 ##[1,] -0.6264538  1.5952808 0.4874291
